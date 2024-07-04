@@ -6,7 +6,7 @@ Created to link my rrss.
 npm create astro@latest -- --template basics
 ```
 
-[![Look it!]](https://eduardo732.github.io/links/)
+[![Check it out!]](https://eduardo732.github.io/links/)]
 
 ## 🚀 Project Structure
 
