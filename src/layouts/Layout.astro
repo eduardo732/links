@@ -1,0 +1,76 @@
+---
+interface Props {
+	title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <div id="background" class="absolute left-0 top-0 w-full h-full">
+		  <slot />
+    </div>
+
+    <script
+      defer
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+    >
+    </script>
+    <script
+      defer
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"
+    >
+    </script>
+    <script is:inline type="module">
+      const vantaObj = {
+        el: "#background",
+        mouseControls: true,
+        touchControls: false,
+        gyroControls: true,
+        heigth:100,
+        scale: 0.65,
+        scaleMobile: 0.65,
+        color: 0xc
+      };
+
+      //Init Vanta
+      VANTA.WAVES(vantaObj);
+      
+    </script>
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+	  font-family: system-ui, sans-serif;	
+    scroll-behavior: smooth;
+	}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  @media (prefers-reduced-motion: reduce) {
+    html{
+      scroll-behavior: auto;
+    }
+  }
+	
+</style>
