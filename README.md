@@ -2,10 +2,6 @@
 
 Created to link my rrss.
 
-```sh
-npm create astro@latest -- --template basics
-```
-
 [Check it out!](https://eduardo732.github.io/links/)
 
 ## 🚀 Project Structure
@@ -46,10 +42,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Tools
-[![Astro]](https://astro.build/))
-[![Tailwind]](https://tailwindcss.com/)
-[![Vanta JS]](https://www.vantajs.com/)
-[![Icons]](https://tabler.io/)
+[Astro](https://astro.build/)
+[Tailwind](https://tailwindcss.com/)
+[Vanta JS](https://www.vantajs.com/)
+[Icons](https://tabler.io/)
 
 
 
