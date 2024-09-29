@@ -29,12 +29,12 @@ import TikTokIcon from "../icons/TikTok.astro";
           Eduardo Fuentes | Desarrollador
         </h2>
         <h3 class="mb-5 text-blue-400/100 text-sm md:text-xl">@eduuu.dev</h3>
-          <ul>
+          <ul class="link-grid">
             <li>
               <a 
                 href="https://eduardo732.github.io/portfolio" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <GreatherIcon class="size-6"/>
                 Sitio Oficial
@@ -44,7 +44,7 @@ import TikTokIcon from "../icons/TikTok.astro";
               <a 
                 href="https://github.com/eduardo732" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <GithubIcon class="size-6"/>
                 Github
@@ -54,7 +54,7 @@ import TikTokIcon from "../icons/TikTok.astro";
               <a
                 href="https://www.linkedin.com/in/eduardofuentesreyes/" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <LinkedinIcon class="size-6"/>
                 Linkedin
@@ -64,7 +64,7 @@ import TikTokIcon from "../icons/TikTok.astro";
               <a
                 href="https://www.instagram.com/eduuu.dev" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <InstagramIcon class="size-6"/>
                 Instagram
@@ -74,7 +74,7 @@ import TikTokIcon from "../icons/TikTok.astro";
               <a
                 href="https://www.youtube.com/@eduuu_dev" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <YoutubeIcon class="size-6"/>
                 Youtube
@@ -84,7 +84,7 @@ import TikTokIcon from "../icons/TikTok.astro";
               <a
                 href="https://www.tiktok.com/@eduuu.dev" 
                 target="_blank" 
-                class=`w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition`
+                class="w-full text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-white/10 gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition"
               >
                 <TikTokIcon class="size-6"/>
                TikTok 
@@ -153,4 +153,24 @@ import TikTokIcon from "../icons/TikTok.astro";
 		gap: 2rem;
 		padding: 0;
 	}
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+  .link-grid li {
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .link-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
