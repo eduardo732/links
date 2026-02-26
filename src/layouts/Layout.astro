@@ -18,8 +18,9 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-    <div id="background" class="absolute left-0 top-0 w-full h-full">
-		  <slot />
+    <div id="background"></div>
+    <div class="content">
+          <slot />
     </div>
 
     <script
@@ -40,7 +41,8 @@ const { title, description } = Astro.props;
         mouseControls: true,
         touchControls: false,
         gyroControls: true,
-        heigth:100,
+        minHeight: 667.00,
+        minWidth: 375.00,
         scale: 0.65,
         scaleMobile: 0.65,
         color: 0xc
@@ -53,24 +55,41 @@ const { title, description } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: dark;
-	}
-	html {
-	  font-family: system-ui, sans-serif;	
+    :root {
+        color-scheme: dark;
+    }
+    html {
+      font-family: system-ui, sans-serif;	
     scroll-behavior: smooth;
-	}
+    }
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
   
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
   
   @media (prefers-reduced-motion: reduce) {
     html{
       scroll-behavior: auto;
     }
   }
-	
+    
 </style>
