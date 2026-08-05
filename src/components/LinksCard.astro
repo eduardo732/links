@@ -1,0 +1,134 @@
+---
+import GithubIcon from "../icons/Github.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GreatherIcon from "../icons/Greather.astro";
+import InstagramIcon from "../icons/Instagram.astro";
+import YoutubeIcon from "../icons/Youtube.astro";
+import TikTokIcon from "../icons/TikTok.astro";
+
+// Normalizar base: siempre empieza con / y termina con /
+let base = import.meta.env.BASE_URL || '/';
+if (!base.startsWith('/')) base = '/' + base;
+if (!base.endsWith('/')) base = base + '/';
+
+const LINK_CLASS =
+  "w-full whitespace-nowrap text-base md:text-xl flex flex-row justify-center items-center rounded-3xl border border-blueprint-line gap-x-2 py-2 px-4 my-2 bg-blueprint-panel/40 hover:border-blueprint-accent hover:text-blueprint-accent hover:scale-105 transition";
+---
+
+<section
+  class="w-full lg:w-[750px] min-h-[700px] xl:h-[900px] flex justify-center flex-col mx-auto my-auto"
+>
+  <div
+    class="flex flex-col items-center min-h-[650px] rounded-3xl border border-blueprint-line bg-blueprint-panel/60 shadow-lg shadow-blueprint-accent/10 py-16"
+  >
+    <img
+      src={`${base}me.webp`}
+      alt="edudev photo"
+      class="rounded-full size-36 object-cover shadow-blueprint-accent/30 shadow-lg"
+    />
+    <h2 class="text-slate-100 text-2xl md:text-3xl font-bold mt-5 text-center">
+      Eduardo Fuentes
+    </h2>
+    <p
+      class="text-blueprint-accent2 text-xs md:text-sm font-mono uppercase tracking-widest mt-1"
+    >
+      Software Engineer
+    </p>
+    <h3 class="mb-5 mt-2 text-blueprint-accent text-sm md:text-xl font-mono">
+      @eduuu.dev
+    </h3>
+    <ul class="link-grid">
+      <li>
+        <a
+          href="https://eduardo732.github.io/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <GreatherIcon class="size-6" />
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/eduardo732"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <GithubIcon class="size-6" />
+          Github
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/eduardofuentesreyes/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <LinkedinIcon class="size-6" />
+          Linkedin
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/eduuu.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <InstagramIcon class="size-6" />
+          Instagram
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/@eduuu_dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <YoutubeIcon class="size-6" />
+          Youtube
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.tiktok.com/@eduuu.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={LINK_CLASS}
+        >
+          <TikTokIcon class="size-6" />
+          TikTok
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .link-grid li {
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .link-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

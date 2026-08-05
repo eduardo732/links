@@ -9,6 +9,6 @@ export default defineConfig({
     enabled: false,
   },
   site: "https://eduardo732.github.io",
-  base: "links",
+  base: "/links",
 });
 

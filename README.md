@@ -11,16 +11,20 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── me.webp
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── LinksCard.astro
+│   ├── icons/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
+
+The site is English-only — no i18n. Copy lives directly in `LinksCard.astro`.
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
@@ -44,7 +48,6 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Tools
 [Astro](https://astro.build/)
 [Tailwind](https://tailwindcss.com/)
-[Vanta JS](https://www.vantajs.com/)
 [Icons](https://tabler.io/)
 
 
